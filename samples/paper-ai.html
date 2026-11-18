@@ -1,0 +1,22 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta property="og:type" content="article"><meta property="og:title" content="인공신경망은 어떻게 배우는가: 딥러닝 학습 원리 개관"><meta property="og:description" content="인공신경망은 많은 예시를 보며 스스로 규칙을 찾아낸다. 이 글은 신경망의 기본 구조, 오차를 줄이며 배우는 경사 하강법과 역전파, 그리고 최근 언어 모델의 바탕이 된 어텐션 구조를 쉬운 말로 정리한"><meta property="og:image" content="https://zhared79-del.github.io/soritube-legal/samples/paper-ai.jpg"><meta name="twitter:card" content="summary_large_image"><title>인공신경망은 어떻게 배우는가: 딥러닝 학습 원리 개관</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"><style>
+
+body{max-width:820px;margin:0 auto;padding:24px 18px;font-family:"Noto Serif KR","Batang",serif;font-size:10.5pt;line-height:1.7;color:#111;margin:0}
+.journal{font-family:"Noto Sans KR",sans-serif;font-size:8.5pt;color:#555;border-bottom:1px solid #999;padding-bottom:4px;margin-bottom:14px;display:flex;justify-content:space-between}
+h1{font-size:17pt;line-height:1.35;text-align:center;margin:6px 0 8px}
+.en{text-align:center;font-style:italic;font-size:10pt;color:#333;margin-bottom:10px}
+.auth{text-align:center;font-family:"Noto Sans KR",sans-serif;font-size:9.5pt;margin-bottom:14px}
+.abs{border:1px solid #aaa;background:#f6f6f2;padding:10px 14px;font-size:9.5pt;margin-bottom:8px}
+.abs b{font-family:"Noto Sans KR",sans-serif}
+.kw{font-size:9pt;margin-bottom:14px}
+.cols{column-count:2;column-gap:8mm;text-align:justify}
+h2{font-family:"Noto Sans KR",sans-serif;font-size:11pt;margin:10px 0 4px;break-after:avoid}
+p{margin:0 0 6px;text-indent:1em}
+figure{margin:8px 0;break-inside:avoid;text-align:center}
+figcaption{font-family:"Noto Sans KR",sans-serif;font-size:8.5pt;color:#333;margin-top:4px}
+.ref{font-size:8.8pt;text-indent:-1.5em;padding-left:1.5em;margin:0 0 4px}
+</style></head><body>
+<div class="journal"><span>학습과학 세미나 발표 자료</span><span>2026년 11월</span></div>
+<h1>인공신경망은 어떻게 배우는가:<br>딥러닝 학습 원리 개관</h1><div class="en">How Neural Networks Learn: An Overview of Deep Learning</div><div class="auth">홍길동 · 학습과학 스터디</div>
+<div class="abs"><b>요약</b> 인공신경망은 많은 예시를 보며 스스로 규칙을 찾아낸다. 이 글은 신경망의 기본 구조, 오차를 줄이며 배우는 경사 하강법과 역전파, 그리고 최근 언어 모델의 바탕이 된 어텐션 구조를 쉬운 말로 정리한다.</div><div class="kw"><b>주제어:</b> 인공신경망, 딥러닝, 역전파, 경사 하강법, 어텐션</div>
+<div class="cols"><h2>1. 서론</h2><p>사진 속 고양이를 알아보거나 문장을 번역하는 프로그램은 사람이 규칙을 하나하나 적어 넣어 만든 것이 아니다. 많은 예시를 보여 주고 스스로 규칙을 찾게 하는 방법, 곧 기계 학습으로 만든다.</p><h2>2. 신경망의 구조</h2><p>신경망은 입력층, 여러 개의 은닉층, 출력층으로 이루어진다. 각 층의 노드는 앞 층에서 받은 값에 가중치를 곱해 더한 뒤 다음 층으로 넘긴다. 층을 깊게 쌓은 신경망을 다루는 분야를 딥러닝이라고 부른다.</p><h2>3. 오차를 줄이며 배우기</h2><p>신경망은 처음에 엉뚱한 답을 낸다. 정답과의 차이, 곧 오차를 계산한 뒤 오차가 줄어드는 방향으로 가중치를 조금씩 고친다. 이를 경사 하강법이라 하고, 출력층에서 입력층 쪽으로 오차를 거꾸로 전달하며 각 가중치의 책임을 계산하는 방법을 역전파라고 한다.</p><h2>4. 어텐션과 언어 모델</h2><p>문장을 다루는 모델에서는 단어마다 다른 단어를 얼마나 참고할지 스스로 정하는 어텐션 구조가 큰 발전을 이끌었다. 오늘날 널리 쓰이는 대형 언어 모델도 이 구조를 바탕으로 한다.</p><h2>5. 시사점</h2><p>신경망은 본 예시만큼 배운다. 데이터에 치우침이 있으면 결과에도 치우침이 생기므로, 좋은 데이터를 고르고 결과를 꼼꼼히 검토하는 사람의 역할이 여전히 중요하다.</p><h2>참고문헌</h2><p class="ref">LeCun, Y., Bengio, Y., &amp; Hinton, G. (2015). Deep learning. <i>Nature</i>, 521, 436–444.</p><p class="ref">Rumelhart, D. E., Hinton, G. E., &amp; Williams, R. J. (1986). Learning representations by back-propagating errors. <i>Nature</i>, 323, 533–536.</p><p class="ref">Vaswani, A., et al. (2017). Attention is all you need. <i>Advances in Neural Information Processing Systems</i>, 30.</p></div><p style="margin-top:30px;font-size:12px;color:#99a">이 글은 소리튜브 사용 예시를 위해 만든 개관 자료입니다.</p></body></html>
